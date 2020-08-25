@@ -1,0 +1,58 @@
+.blink_me {
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    color:red;
+    font-weight:bold;
+}
+@keyframes blinker { 
+ 
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+.datax #show {
+    width: 31%;
+    float: left;
+    text-align: center;
+}
+.positif, .sembuh, .meninggal, .total {
+    margin: 1%;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 2px rgba(0,0,0,.5);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: white;
+    font-size: 13px;
+    font-family: "Montserrat";
+}
+.datax .positif {
+    background: #ffcc5c;
+}
+.datax .sembuh {
+    background: #88d8b0;
+}
+.datax .meninggal {
+    background: #ff6f69;
+}
+.datax .total {
+    background: #ff6f69;
+}
+#show .angka {
+    font-size: 30px;
+    font-weight: 700;
+}
+#show .detail {
+    background: white;
+    width: 100%;
+    display: block;
+    color: black;
+    box-shadow: 0px -2px 4px 1px #66c7ff;
+}
+.datax .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size:18px;
+}

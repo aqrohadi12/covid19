@@ -1,0 +1,198 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<ngb-carousel>
+					<ng-template ngbSlide>
+						<img src="assets/images/big/ramadan.jpg"  width="100%" height="400px" alt="Random first slide">
+						<div class="carousel-caption">
+							<h4 class="text-white font-bold"></h4>
+							<p>Mubarak Kareem!</p>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="assets/images/big/covid.jpg" width="100%" height="400px" alt="Random second slide">
+						<div class="carousel-caption">
+							<h4 class="text-white font-bold">Covid-19...</h4>
+							<p>Indonesia Bisa Lawan Corona</p>
+						</div>
+					</ng-template>
+					<ng-template ngbSlide>
+						<img src="assets/images/big/imani.jpg"  width="100%" height="400px" alt="Random third slide">
+						<div class="carousel-caption">
+							<h4 class="text-white font-bold">PT. Imani Prima.</h4>
+							<p>We're SImple</p>
+						</div>
+					</ng-template>
+				</ngb-carousel>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+				<h4 class="card-title">Tentang Covid-19</h4>
+                <ngb-tabset type="pills">
+                  <ngb-tab title="Apa Itu COVID-19 ?">
+                    <ng-template ngbTabContent>
+                      <p class="p-t-30">Coronavirus Disease 2019 atau COVID-19 adalah penyakit baru yang dapat menyebabkan gangguan pernapasan dan radang paru.
+						Penyakit ini disebabkan oleh infeksi Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2). Gejala klinis 
+						yang muncul beragam, mulai dari seperti gejala flu biasa (batuk, pilek, nyeri tenggorok, nyeri otot, nyeri kepala) 
+						sampai yang berkomplikasi berat (pneumonia atau sepsis).</p>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab>
+                    <ng-template ngbTabTitle>Bagaimana <b>COVID-19</b> Menular?</ng-template>
+                    <ng-template ngbTabContent><p class="p-t-30">COVID-19 adalah penyakit baru dan para peneliti masih mempelajari bagaimana cara penularannya. 
+						Dari berbagai penelitian, metode penyebaran utama penyakit ini diduga adalah melalui droplet saluran pernapasan dan kontak dekat 
+						dengan penderita. Droplet merupakan partikel kecil dari mulut penderita yang dapat mengandung virus penyakit, yang dihasilkan pada saat batuk, bersin, atau berbicara. Droplet dapat melewati sampai jarak tertentu (biasanya 1 meter).
+						Droplet bisa menempel di pakaian atau benda di sekitar penderita pada saat batuk atau bersin. Namun, partikel droplet cukup besar sehingga tidak akan bertahan atau mengendap di udara dalam waktu yang lama. Namun, masyarakat diwajibkan 
+						untuk menggunakan masker kain yang menutupi hidung dan mulut untuk mencegah penyebaran droplet.</p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab>
+                    <ng-template ngbTabTitle>Apa <b>Gejala COVID-19</b>?</ng-template>
+                    <ng-template ngbTabContent><p class="p-t-30">Gejala COVID-19 mulai dari seperti gejala flu biasa, Demam suhu tinggi / Ada riwayat demam sampai kondisi berat seperti 
+					pneumonia (radang paru akut yang gejalanya sesak napas). Jika Anda mengalami gejala, memiliki riwayat perjalanan ke wilayah terjangkit, atau berpaparan dengan orang positif/kemungkinan COVID-19, maka Anda diimbau untuk melakukan isolasi diri dan menghubungi Jakarta 
+					Tanggap COVID-19 di nomor 112 atau pesan Whatsapp melalui 081 112 112 112 atau 081 388 376 955.</p>
+                    </ng-template>
+                  </ngb-tab>
+                  <!-- <ngb-tab title="Disabled" [disabled]="true">
+                    <ng-template ngbTabContent>
+                      <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+                    </ng-template>
+                  </ngb-tab> -->
+                </ngb-tabset>
+         	</div>
+        </div>
+	</div>
+	
+	 <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Hal yang Harus Dilakukan</h4>
+                <h6 class="card-subtitle"> Melindungi Diri dari COVID-19</h6>
+                <ngb-tabset #t="ngbTabset">
+                  <ngb-tab id="tab-selectbyid1" title="1">
+                    <ng-template ngbTabContent>
+					  <p class="p-t-20"><img src="assets/images/cov/cov1.webp" width="20%" height="100px" style="display: block; margin: auto;">
+						Tetap tinggal di rumah, bekerja dari rumah, belajar dari rumah, dan beribadah di rumah</p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid2')">Selected Next Tab 2</button>
+					  </p>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab id="tab-selectbyid2">
+                    <ng-template ngbTabTitle><b>2</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov2.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Cuci tangan dengan sabun dan air minimal 20 detik atau gunakan hand sanitizer berbasis alkohol minimal 60 %</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid3')">Selected Next Tab 3</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid3">
+                    <ng-template ngbTabTitle><b>3</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov3.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Bersihkan dan disinfeksi permukaan benda yang sering disentuh</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid4')">Selected Next Tab 4</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid4">
+                    <ng-template ngbTabTitle><b>4</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov4.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Tutupi mulut dan hidung saat batuk atau bersin dengan tisu atau siku bagian dalam</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid5')">Selected Next Tab 5</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid5">
+                    <ng-template ngbTabTitle><b>5</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov5.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Pakai masker jika Anda harus beraktivitas di luar rumah dan ganti secara berkala</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid6')">Selected Next Tab 6</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid6">
+                    <ng-template ngbTabTitle><b>6</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov6.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Terapkan pola hidup sehat dengan makanan bergizi dan olahraga</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="t.select('tab-selectbyid1')">Selected Next Tab 1</button>
+					  </p>
+                    </ng-template>
+                  </ngb-tab>
+                </ngb-tabset>
+  			</div>
+        </div>
+	</div>
+	
+	<div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Hal yang Tidak Boleh Dilakukan</h4>
+                <h6 class="card-subtitle">Melindungi Diri dari COVID-19</h6>
+                <ngb-tabset #s="ngbTabset">
+                  <ngb-tab id="tab-selectbyid7" title="1">
+                    <ng-template ngbTabContent>
+					  <p class="p-t-20"><img src="assets/images/cov/cov7.webp" width="20%" height="100px" style="display: block; margin: auto;">
+						Bepergian ke luar rumah untuk hal yang tidak penting</p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="s.select('tab-selectbyid8')">Selected Next Tab 2</button>
+					  </p>
+                    </ng-template>
+                  </ngb-tab>
+                  <ngb-tab id="tab-selectbyid8">
+                    <ng-template ngbTabTitle><b>2</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov8.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Berada dekat dengan orang yang sedang sakit, batuk atau bersin</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="s.select('tab-selectbyid9')">Selected Next Tab 3</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid9">
+                    <ng-template ngbTabTitle><b>3</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov9.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Menyentuh mata, hidung, atau mulut dengan telapak tangan</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="s.select('tab-selectbyid10')">Selected Next Tab 4</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				  <ngb-tab id="tab-selectbyid10">
+                    <ng-template ngbTabTitle><b>4</b></ng-template>
+                    <ng-template ngbTabContent>
+						<p class="p-t-20"><img src="assets/images/cov/cov10.webp" width="20%" height="100px" style="display: block; margin: auto;">
+							Menimbun masker, hand sanitizer, atau perlengkapan medis lainnya</p>
+						  <p>
+					  <p>
+						<button class="btn btn-outline-primary" (click)="s.select('tab-selectbyid7')">Selected Next Tab 5</button>
+					  </p>
+                    </ng-template>
+				  </ngb-tab>
+				</ngb-tabset>
+  			</div>
+        </div>
+	</div>
+</div>

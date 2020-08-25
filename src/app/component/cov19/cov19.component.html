@@ -1,0 +1,53 @@
+<h3 class="text-center">Covid-19 World</h3> 
+<h3 class="text-center"><span class="blink_me">Live Update</span></h3>
+<div class="row">
+			<div class="col-md-6 row m-0">
+				<select class="form-control col-md-2">
+					<option value="10" selected="selected">10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+				<label class="col-md-2  col-form-label"><strong>Entries</strong></label>
+			</div>	
+			<div class="col-md-6">
+				<div class="float-right row m-0">
+					<label class="col-md-4 col-form-label"><strong>Search: </strong></label>
+					<input type="search" class="form-control col-md-8">
+				</div>
+			</div>
+		</div>
+		<br>	
+		<ngb-alert [dismissible]="false" class="text-center">
+			<strong>Update Date:</strong> {{todayDate | date}} 
+		  </ngb-alert>
+		<table class="table table-bordered mt-4">
+			<thead class="text-center">
+				<tr>
+					<th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.OBJECTID')">ID</th>
+					<th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.Country_Region')">Negara</th>
+					<th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.Confirmed')">Positive</th>
+					<th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.Recovered')">Sembuh</th>
+                    <th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.Deaths')">Meninggal</th>
+                    <th bgcolor="white" rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('attributes.Active')">AKTIF</th>  
+                </tr>
+			</thead>
+			<tbody class="tbody">
+				<tr *ngFor="let item of world">
+					<td>{{ item.attributes.OBJECTID }}</td>
+					<td>{{ item.attributes.Country_Region }}</td>
+					<td>{{ item.attributes.Confirmed }}</td>
+					<td>{{ item.attributes.Recovered }}</td>
+                    <td>{{ item.attributes.Deaths }}</td>  
+                    <td style="background-color:#FFFFFF">{{ item.attributes.Active }}</td>
+                </tr>
+			</tbody>
+		</table>
+		<div class="row align-items-center mt-3 ml-3">
+			<div class="col">
+				<p>Total Data entries </p>
+            </div>
+            <ngb-pagination [collectionSize]="120" [(page)]="page2" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+			<div class="justify-content-end mr-3 mr-5">
+			</div>
+		</div>

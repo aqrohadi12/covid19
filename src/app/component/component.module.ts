@@ -28,6 +28,7 @@ import { CovidComponent } from './covid/covid.component';
 import { AppService } from './../app.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   imports: [
@@ -57,7 +58,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     TabelComponent,
     CovidComponent,
     Cov19Component,
-    NewsComponent
+    NewsComponent,
+    MapsComponent
   ],
   providers: [
 		AppService

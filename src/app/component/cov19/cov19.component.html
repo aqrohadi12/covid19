@@ -13,9 +13,9 @@
 			<div class="col-md-6">
 				<div class="float-right row m-0">
 					<label class="col-md-4 col-form-label"><strong>Search: </strong></label>
-					<input type="search" class="form-control col-md-8">
+					<input type="search" class="form-control col-md-8" [(ngModel)]="filter">
 				</div>
-			</div>
+			</div> 
 		</div>
 		<br>	
 		<ngb-alert [dismissible]="false" class="text-center">
@@ -33,7 +33,7 @@
                 </tr>
 			</thead>
 			<tbody class="tbody">
-				<tr *ngFor="let item of world">
+				<tr *ngFor="let item of world | filter : filter | paginate: { itemsPerPage: 10, currentPage: p }; let i = index;">
 					<td>{{ item.attributes.OBJECTID }}</td>
 					<td>{{ item.attributes.Country_Region }}</td>
 					<td>{{ item.attributes.Confirmed }}</td>
@@ -47,7 +47,7 @@
 			<div class="col">
 				<p>Total Data entries </p>
             </div>
-            <ngb-pagination [collectionSize]="120" [(page)]="page2" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+			<ngb-pagination class="d-flex justify-content-start" [collectionSize]="100" [rotate]="true" [boundaryLinks]="true" [maxSize]="5" [(page)]="page" (pageChange)="p = $event"></ngb-pagination>
 			<div class="justify-content-end mr-3 mr-5">
 			</div>
 		</div>

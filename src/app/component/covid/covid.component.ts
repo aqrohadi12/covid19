@@ -15,8 +15,9 @@ export class CovidComponent implements OnInit{
   deaths;
   isDesc: boolean = false;
   public sort = 'fid,asc';
-
-  page = 1;
+  page = 4;
+  filter: any;
+  p: 2;
 
 //inject HttpClient into your component or service.
 constructor (
@@ -35,14 +36,14 @@ ngOnInit() {
   getList() {
 		return this.appService.getProvinsi().subscribe(
 			(data: any) => {
-        this.provinsi = data[''];
+        this.provinsi = data['data'];
         swal.close();
 			},
 			error => {
 				swal.close();         
 				this.other.alertErrorService(error['message']);
 			}
-		);
+		); 
   }
 
   getConfirmed() {

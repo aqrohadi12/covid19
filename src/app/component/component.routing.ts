@@ -17,6 +17,7 @@ import { ToastComponent } from './toast/toast.component';
 import { CovidComponent } from './covid/covid.component';
 import { Cov19Component } from './cov19/cov19.component';
 import { NewsComponent } from './news/news.component';
+import { MapsComponent } from './maps/maps.component';
 
 export const ComponentsRoutes: Routes = [
 	{
@@ -27,6 +28,13 @@ export const ComponentsRoutes: Routes = [
 				component: NgbdpregressbarBasicComponent,
 				data: {
 					title: 'Progressbar'
+				}
+			},
+			{
+				path: 'maps',
+				component: MapsComponent,
+				data: {
+					title: 'Maps-World'
 				}
 			},
 			{

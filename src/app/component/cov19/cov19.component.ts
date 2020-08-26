@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service';
 import swal from 'sweetalert2';
 import { OtherService } from '../../other.service';
+import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-cov19',
@@ -11,9 +12,12 @@ import { OtherService } from '../../other.service';
 export class Cov19Component implements OnInit {
 world;
 page2 = 1;
-isDesc: boolean = false;
+isDesc: boolean = false; 
 public sort = 'OBJECTID,asc';
 todayDate : Date = new Date();
+page = 4;
+filter: any;
+p: 2;
 
   //inject HttpClient into your component or service.
 constructor (

@@ -29,7 +29,7 @@
 			<div class="col-md-6">
 				<div class="float-right row m-0">
 					<label class="col-md-4 col-form-label"><strong>Search: </strong></label>
-					<input type="search" class="form-control col-md-8">
+					<input type="search" class="form-control col-md-8" [(ngModel)]="filter">
 				</div>
 			</div>
 		</div>
@@ -43,9 +43,9 @@
 					<th rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('kasusSemb')">Sembuh</th>
 					<th rowspan="1" colspan="1" style="cursor: pointer;" (click)="sortData('kasusMeni')">Meninggal</th>
 				</tr>
-			</thead>
+			</thead> 
 			<tbody class="tbody">
-				<tr *ngFor="let item of provinsi">
+				<tr *ngFor="let item of provinsi | filter : filter | paginate: { itemsPerPage: 10, currentPage: p }; let i = index; ">
 					<td style="background-color:#FFFFFF">{{ item.fid }}</td>
 					<td style="background-color:#FFFFFF">{{ item.kodeProvi }}</td>
 					<td style="background-color:#FFFFFF">{{ item.provinsi }}</td>
@@ -56,7 +56,7 @@
 			</tbody>
 			<tbody>
 				<tr>
-					<td colspan="8">No data found</td>
+					<td colspan="6">No data found</td>
 				</tr>
 			</tbody>
 		</table>
@@ -64,7 +64,7 @@
 			<div class="col">
 				<p>Total Data entries </p>
 			</div>
-			<ngb-pagination class="d-flex justify-content-start" [collectionSize]="70" [(page)]="page"></ngb-pagination>
+			<ngb-pagination class="d-flex justify-content-start" [collectionSize]="100" [rotate]="true" [boundaryLinks]="true" [maxSize]="5" [(page)]="page" (pageChange)="p = $event"></ngb-pagination>
 			<div class="justify-content-end mr-3 mr-5">
 			</div>
 		</div>

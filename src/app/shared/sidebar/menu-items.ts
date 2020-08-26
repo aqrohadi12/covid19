@@ -58,6 +58,14 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
+    path: '/component/maps',
+    title: 'Maps-World',
+    icon: 'mdi mdi-earth',
+    class: '',
+    extralink: false,
+    submenu: []
+  },
+  {
     path: '',
     title: 'UI Components',
     icon: 'mdi mdi-dots-horizontal',
